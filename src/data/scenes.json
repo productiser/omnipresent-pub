@@ -28,7 +28,7 @@
        "ambientAudio": "audio/audiobg1.mp3",
       "scenes": [
         {
-          "parallaxText": "Drinkign and dancing",
+          "parallaxText": "Drinking and dancing",
           "location": "Fun times",
           "day": "West hampstead inn",
           "bg": "FLOBG.png",
