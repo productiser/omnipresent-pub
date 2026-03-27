@@ -4,8 +4,6 @@ Omnipresent- A cinematic, scroll-driven memory capsule — built as a permanent 
 
 ![image-20260327215217302](/Users/praveenataluri/pankstr/publicrepos/omnipresent-pub/demo/image-20260327215217302.png)
 
-<img width="1085" height="690" alt="image" src="https://github.com/user-attachments/assets/9788e5a5-b1f9-4c29-9db0-64cfe52463fd" />
-
 
 ## What it does
 
@@ -26,46 +24,60 @@ npm run dev
 
 ## Customising for your occasion
 1. Configure src/data/scenes.json
-The entire experience is defined in one file. Structure:
-json{
-  "makers": [
-    {
-      "id": "maker-1",
-      "title": "presents",
-      "introLabel": "from sarah",
-      "parallaxText": "rolling ticker text here...",
-      "bg": "your-intro-bg.jpg",
-      "ambientAudio": "audio/your-bg-music.mp3",
-      "scenes": [
-        {
-          "parallaxText": "ticker text for this scene",
-          "location": "big headline text",
-          "day": "small label (date, place, occasion)",
-          "bg": "scene-background.jpg",
-          "gifts": [
-            "images/photo.jpg",
-            "videos/message.mp4",
-            "audio/voice-note.m4a",
-            "letters/letter.txt"
-          ]
-        }
-      ]
-    }
-  ]
-}
-Each maker = one contributor's section. Each scene = one slide. Add as many of each as you need.
+  The entire experience is defined in one file. Structure:
+  json{
+    "makers": [
+   {
+     "id": "maker-1",
+     "title": "presents",
+     "introLabel": "from sarah",
+     "parallaxText": "rolling ticker text here...",
+     "bg": "your-intro-bg.jpg",
+     "ambientAudio": "audio/your-bg-music.mp3",
+     "scenes": [
+       {
+         "parallaxText": "ticker text for this scene",
+         "location": "big headline text",
+         "day": "small label (date, place, occasion)",
+         "bg": "scene-background.jpg",
+         "gifts": [
+           "images/photo.jpg",
+           "videos/message.mp4",
+           "audio/voice-note.m4a",
+           "letters/letter.txt"
+         ]
+       }
+     ]
+   }
+    ]
+  }
+  Each maker = one contributor's section. Each scene = one slide. Add as many of each as you need.
+
+  
+
 2. Add your assets
-src/assets/
-  bg/          ← background images (one per scene)
-  media/
-    images/    ← photos
-    videos/    ← video messages
-    audio/     ← voice notes, background music
-    letters/   ← .txt or .md files for written messages
-Assets are resolved by filename — just reference the filename in scenes.json, no path needed.
+  src/assets/
+    bg/          ← background images (one per scene)
+    media/
+   images/    ← photos
+   videos/    ← video messages
+   audio/     ← voice notes, background music
+   letters/   ← .txt or .md files for written messages
+  Assets are resolved by filename — just reference the filename in scenes.json, no path needed.
+
+
+
 3. Deploy
-bashnpm run build
-Push to GitHub and deploy via Vercel (zero config, free tier works).
+
+   ```
+   npm install
+   npm run build
+   npm run dev
+   
+   Push to GitHub and deploy via Vercel (zero config, free tier works).
+   ```
+
+   
 
 ## Gift types
 TypeExtensionsHow to addPhotojpg, png, webp, gif"images/photo.jpg"Videomp4, mov, webm"videos/message.mp4"Audiomp3, m4a, wav"audio/voice.m4a"Lettertxt, md"letters/note.txt"
