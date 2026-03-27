@@ -1,8 +1,8 @@
 # omnipresent-pub
 Omnipresent- A cinematic, scroll-driven memory capsule — built as a permanent URL you return to. Give someone a birthday, memorial, graduation, or any moment worth keeping.
-### Live demo →
+### Sample →
 
-![image-20260327215217302](/Users/praveenataluri/pankstr/publicrepos/omnipresent-pub/demo/image-20260327215217302.png)
+![image-20260327215217302](demo/image-20260327215217302.png)
 
 
 ## What it does
