@@ -1,0 +1,42 @@
+{
+  "makers": [
+    {
+      "id": "maker-1",
+      "title": "presents",
+      "parallaxText": "Thinking of you",
+      "introLabel": "John",
+      "bg": "MGARDENBG.png",
+      "ambientAudio": "audio/audiobg1.mp3",
+      "scenes": [
+        {
+          "parallaxText": "Crazy memories",
+          "location": "Mt. Kilimanjaro",
+          "day": "28th April",
+          "bg": "FLOBG.png",
+          "gifts": [
+            "videos/PersonalVideo.mp4"
+          ]
+        }
+        ]
+    },
+    {
+      "id": "maker-2",
+      "title": "presents",
+      "parallaxText": "With you",
+      "introLabel": "Shae",
+      "bg": "MGARDENBG.png",
+       "ambientAudio": "audio/audiobg1.mp3",
+      "scenes": [
+        {
+          "parallaxText": "Drinkign and dancing",
+          "location": "Fun times",
+          "day": "West hampstead inn",
+          "bg": "FLOBG.png",
+          "gifts": [
+            "images/uandi.JPG"
+          ]
+        }
+  ]
+}
+]
+}

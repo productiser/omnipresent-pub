@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-handwriting: "Caveat", cursive;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --color-gold: #D4AF37;
+  --color-cream: #F5F5DC;
+  --color-charcoal: #1A1A1A;
+}
+
+body {
+  @apply bg-charcoal text-cream font-sans overflow-x-hidden;
+}
+
+h1, h2, h3 {
+  @apply font-serif;
+}
+
+.parallax-bg-text {
+  background:
+    linear-gradient(90deg, rgba(6, 18, 14, 0.18) 0%, rgba(6, 18, 14, 0.74) 10%, rgba(8, 26, 19, 0.9) 50%, rgba(6, 18, 14, 0.74) 90%, rgba(6, 18, 14, 0.18) 100%);
+  border-top: 1px solid rgba(172, 214, 191, 0.12);
+  border-bottom: 1px solid rgba(172, 214, 191, 0.12);
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(213, 238, 222, 0.05),
+    inset 0 -1px 0 rgba(213, 238, 222, 0.05);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 1) 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 1) 88%, transparent 100%);
+  padding: 0.55rem 0;
+}
+
+.parallax-bg-text-track {
+  display: flex;
+  width: max-content;
+  animation: parallax-ticker 24s linear infinite;
+  will-change: transform;
+}
+
+.parallax-bg-text-group {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.parallax-bg-text-item {
+  color: rgba(255, 211, 227, 0.92);
+  -webkit-text-stroke: 1px rgba(91, 8, 39, 0.28);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.15rem, 2.2vw, 2.1rem);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 0.9;
+  opacity: 0.92;
+  text-shadow:
+    0 0 8px rgba(255, 160, 205, 0.14),
+    0 0 18px rgba(185, 23, 102, 0.16);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .parallax-bg-text {
+    padding: 0.42rem 0;
+  }
+
+  .parallax-bg-text-group {
+    gap: 1rem;
+    padding-right: 1rem;
+  }
+
+  .parallax-bg-text-item {
+    font-size: clamp(0.9rem, 4vw, 1.15rem);
+    letter-spacing: 0.04em;
+  }
+}
+
+@keyframes parallax-ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Custom scrollbar for horizontal scrolling */
+::-webkit-scrollbar {
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 10px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
