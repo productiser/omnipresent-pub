@@ -24,9 +24,14 @@ npm run dev
 
 ## Customising for your occasion
 1. Configure src/data/scenes.json
+  
   The entire experience is defined in one file. Structure:
-  json{
-    "makers": [
+    
+    Each maker = one contributor's section. Each scene = one slide. Add as many of each as you need.
+   
+   ```
+     json{
+   "makers": [
    {
      "id": "maker-1",
      "title": "presents",
@@ -45,15 +50,15 @@ npm run dev
            "videos/message.mp4",
            "audio/voice-note.m4a",
            "letters/letter.txt"
-         ]
-       }
-     ]
-   }
+        ]
+      }
     ]
   }
-  Each maker = one contributor's section. Each scene = one slide. Add as many of each as you need.
-
+   ]
+    }
+  ```
   
+    
 
 2. Add your assets
   src/assets/
@@ -63,20 +68,18 @@ npm run dev
    videos/    ← video messages
    audio/     ← voice notes, background music
    letters/   ← .txt or .md files for written messages
-  Assets are resolved by filename — just reference the filename in scenes.json, no path needed.
+    Assets are resolved by filename — just reference the filename in scenes.json, no path needed.
 
 
 
 3. Deploy
 
    ```
-   npm install
-   npm run build
-   npm run dev
+   
+   For Localhost 3001 deployment run npm run dev
    
    Push to GitHub and deploy via Vercel (zero config, free tier works).
    ```
-
    
 
 ## Gift types
